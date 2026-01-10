@@ -1,0 +1,636 @@
+/**
+ * CSS Print pour CV PDF Professionnel
+ * 
+ * Objectif : Générer un CV PDF clair, lisible et professionnel
+ * Compatible ATS, optimisé recruteur, maximum 2 pages
+ * 
+ * Utilisation : Ce CSS s'active automatiquement lors de l'impression (Ctrl+P)
+ */
+
+/* ============================================
+   CONFIGURATION GÉNÉRALE
+   ============================================ */
+
+@media print {
+  /* Configuration de la page */
+  @page {
+    size: A4 portrait;
+    margin: 15mm 12mm; /* Marges optimisées pour impression */
+  }
+
+  /* Reset général pour impression */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Corps de page */
+  body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 10.5pt; /* Lisible sans être trop gros */
+    line-height: 1.5;
+    color: #1a202c;
+    background: white !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Container principal */
+  .cv-page {
+    background: white !important;
+    min-height: auto;
+  }
+
+  .cv-main {
+    padding: 0 !important;
+    margin: 0;
+  }
+
+  .cv-container {
+    max-width: 100% !important;
+    gap: 0.8rem !important;
+    padding: 0 !important;
+    margin: 0;
+  }
+
+  /* ============================================
+     ÉLÉMENTS À MASQUER
+     ============================================ */
+
+  /* Éléments UI web non nécessaires en PDF */
+  .pdf-btn,
+  .language-switcher,
+  .cv-footer,
+  button,
+  .social-links,
+  .footer-content {
+    display: none !important;
+  }
+
+  /* Masquer les icônes décoratives (sauf critiques) */
+  .skill-icon,
+  .category-icon,
+  .education-icon,
+  .achievement-icon {
+    display: none !important;
+  }
+
+  /* ============================================
+     HEADER - EN-TÊTE PROFESSIONNEL
+     ============================================ */
+
+  .cv-header {
+    background: white !important;
+    color: #1a202c !important;
+    padding: 1.2rem 0 !important;
+    border-bottom: 3px solid #FF2D20;
+    box-shadow: none !important;
+    position: relative;
+    page-break-after: avoid;
+    text-align: left !important;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  /* Photo professionnelle */
+  .profile-photo {
+    position: static !important;
+    transform: none !important;
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 50% !important;
+    border: 2px solid #E5E7EB !important;
+    box-shadow: none !important;
+    flex-shrink: 0;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+
+  /* Contenu header */
+  .header-content {
+    text-align: left !important;
+    max-width: none !important;
+    margin: 0 !important;
+    flex: 1;
+  }
+
+  .name {
+    font-size: 22pt !important;
+    font-weight: 700 !important;
+    color: #1a202c !important;
+    margin: 0 0 0.25rem 0 !important;
+    letter-spacing: -0.02em;
+  }
+
+  .title {
+    font-size: 14pt !important;
+    font-weight: 600 !important;
+    color: #FF2D20 !important;
+    margin: 0 0 0.25rem 0 !important;
+  }
+
+  .subtitle {
+    font-size: 10pt !important;
+    color: #52525B !important;
+    margin: 0 !important;
+    font-weight: 400;
+  }
+
+  /* ============================================
+     SECTIONS - STRUCTURE GÉNÉRALE
+     ============================================ */
+
+  .cv-section {
+    background: white !important;
+    padding: 0.8rem 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+
+  .section-title {
+    font-size: 13pt !important;
+    font-weight: 700 !important;
+    color: #1a202c !important;
+    margin: 0 0 0.6rem 0 !important;
+    padding-bottom: 0.3rem !important;
+    border-bottom: 2px solid #E5E7EB !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* ============================================
+     CONTACT - INFORMATIONS COMPACTES
+     ============================================ */
+
+  .contact-section {
+    background: #F9FAFB !important;
+    padding: 0.6rem 0.8rem !important;
+    border: 1px solid #E5E7EB !important;
+    border-radius: 4px;
+    margin-bottom: 0.8rem !important;
+  }
+
+  .contact-section .section-title {
+    font-size: 11pt !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .contact-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.4rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+
+  .contact-item {
+    background: white !important;
+    padding: 0.4rem 0.6rem !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-size: 9.5pt !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .contact-item:hover {
+    transform: none !important;
+  }
+
+  .contact-item .icon {
+    width: 14px !important;
+    height: 14px !important;
+    color: #FF2D20 !important;
+  }
+
+  .contact-item strong {
+    font-size: 9pt !important;
+    font-weight: 600 !important;
+  }
+
+  .contact-item p,
+  .contact-item a {
+    font-size: 9pt !important;
+    color: #1a202c !important;
+    text-decoration: none !important;
+  }
+
+  /* Langues en ligne */
+  .languages {
+    margin-top: 0.4rem !important;
+  }
+
+  .languages h4 {
+    font-size: 10pt !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.3rem !important;
+    color: #1a202c !important;
+  }
+
+  .languages ul {
+    display: flex !important;
+    gap: 1rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+
+  .languages li {
+    font-size: 9.5pt !important;
+    color: #52525B !important;
+  }
+
+  .languages li::before {
+    content: '•';
+    margin-right: 0.4rem;
+    color: #FF2D20;
+    font-weight: bold;
+  }
+
+  .languages li:first-child::before {
+    content: '';
+    margin: 0;
+  }
+
+  /* ============================================
+     PROFIL - DESCRIPTION ESSENTIELLE
+     ============================================ */
+
+  .profile-section {
+    background: white !important;
+  }
+
+  .profile-content {
+    margin-bottom: 0.6rem !important;
+  }
+
+  .description {
+    font-size: 10pt !important;
+    line-height: 1.5 !important;
+    color: #1a202c !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Highlight simplifié (sans fond coloré) */
+  .highlight {
+    background: transparent !important;
+    padding: 0.5rem 0 0.5rem 0.8rem !important;
+    border-left: 3px solid #FF2D20 !important;
+    border-radius: 0 !important;
+    font-size: 10pt !important;
+    line-height: 1.5 !important;
+    color: #1a202c !important;
+    font-style: normal !important;
+  }
+
+  /* Soft skills en liste textuelle (sans icônes) */
+  .soft-skills h4 {
+    font-size: 10.5pt !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.4rem !important;
+    color: #1a202c !important;
+  }
+
+  .skills-grid {
+    display: block !important;
+    columns: 2;
+    column-gap: 1rem;
+  }
+
+  .skill-badge {
+    background: transparent !important;
+    border: none !important;
+    padding: 0.2rem 0 !important;
+    display: inline-block;
+    width: 100%;
+    page-break-inside: avoid;
+  }
+
+  .skill-badge:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .skill-name {
+    font-size: 9.5pt !important;
+    color: #1a202c !important;
+  }
+
+  .skill-name::before {
+    content: '▸ ';
+    color: #FF2D20;
+    font-weight: bold;
+  }
+
+  /* ============================================
+     COMPÉTENCES TECHNIQUES
+     ============================================ */
+
+  .skills-section {
+    background: white !important;
+    page-break-inside: avoid;
+  }
+
+  .skills-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.6rem !important;
+  }
+
+  .skill-category {
+    background: white !important;
+    border: 1px solid #E5E7EB !important;
+    border-radius: 4px !important;
+    padding: 0.6rem !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+
+  .skill-category:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .category-header {
+    margin-bottom: 0.5rem !important;
+    padding-bottom: 0.4rem !important;
+    border-bottom: 1px solid #E5E7EB !important;
+  }
+
+  .category-title {
+    font-size: 10.5pt !important;
+    font-weight: 600 !important;
+    color: #1a202c !important;
+  }
+
+  .skill-items {
+    gap: 0.2rem !important;
+  }
+
+  .skill-item {
+    padding: 0.2rem 0 0.2rem 1rem !important;
+    font-size: 9.5pt !important;
+    color: #1a202c !important;
+    line-height: 1.4 !important;
+  }
+
+  .skill-item:hover {
+    transform: none !important;
+  }
+
+  .skill-item::before {
+    color: #FF2D20 !important;
+  }
+
+  /* ============================================
+     EXPÉRIENCES PROFESSIONNELLES
+     ============================================ */
+
+  .experience-section {
+    background: white !important;
+  }
+
+  /* Timeline simplifiée */
+  .timeline {
+    padding-left: 1.2rem !important;
+  }
+
+  .timeline::before {
+    width: 2px !important;
+    background: #E5E7EB !important;
+  }
+
+  .experience-item {
+    margin-bottom: 1rem !important;
+    padding-left: 1rem !important;
+    page-break-inside: avoid;
+  }
+
+  .experience-item::before {
+    left: -1.5rem !important;
+    width: 8px !important;
+    height: 8px !important;
+    border-width: 2px !important;
+    border-color: #FF2D20 !important;
+    background: white !important;
+    box-shadow: none !important;
+  }
+
+  .experience-header {
+    margin-bottom: 0.5rem !important;
+  }
+
+  .position {
+    font-size: 11.5pt !important;
+    font-weight: 600 !important;
+    color: #1a202c !important;
+    margin-bottom: 0.2rem !important;
+  }
+
+  .company {
+    font-size: 10pt !important;
+    font-weight: 500 !important;
+    color: #FF2D20 !important;
+  }
+
+  .period {
+    background: #F3F4F6 !important;
+    padding: 0.3rem 0.6rem !important;
+    border-radius: 3px !important;
+    font-size: 9pt !important;
+    font-weight: 500 !important;
+    color: #52525B !important;
+  }
+
+  .tasks-list {
+    margin: 0.5rem 0 !important;
+    padding-left: 1.2rem !important;
+  }
+
+  .tasks-list li {
+    font-size: 9.5pt !important;
+    line-height: 1.5 !important;
+    color: #1a202c !important;
+    margin-bottom: 0.3rem !important;
+  }
+
+  .tasks-list li::marker {
+    color: #FF2D20 !important;
+  }
+
+  /* Achievement simplifié (sans icône) */
+  .achievement {
+    background: #F9FAFB !important;
+    border-left: 2px solid #10B981 !important;
+    padding: 0.5rem 0.6rem !important;
+    border-radius: 3px !important;
+    margin-top: 0.5rem !important;
+  }
+
+  .achievement p {
+    font-size: 9.5pt !important;
+    color: #1a202c !important;
+    margin: 0 !important;
+    font-style: italic;
+  }
+
+  /* ============================================
+     FORMATION
+     ============================================ */
+
+  .education-section {
+    background: white !important;
+  }
+
+  .education-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0.6rem !important;
+  }
+
+  .education-item {
+    background: white !important;
+    border: 1px solid #E5E7EB !important;
+    border-radius: 4px !important;
+    padding: 0.6rem !important;
+    gap: 0.6rem !important;
+    page-break-inside: avoid;
+  }
+
+  .education-item:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .degree {
+    font-size: 10.5pt !important;
+    font-weight: 600 !important;
+    color: #1a202c !important;
+    margin-bottom: 0.2rem !important;
+  }
+
+  .school {
+    font-size: 10pt !important;
+    font-weight: 500 !important;
+    color: #FF2D20 !important;
+    margin-bottom: 0.2rem !important;
+  }
+
+  .location-period {
+    font-size: 9pt !important;
+    color: #52525B !important;
+    margin-bottom: 0.4rem !important;
+  }
+
+  .description {
+    font-size: 9.5pt !important;
+    line-height: 1.4 !important;
+    color: #1a202c !important;
+  }
+
+  /* ============================================
+     GESTION DE LA PAGINATION
+     ============================================ */
+
+  /* Éviter les coupures de sections */
+  .cv-section,
+  .experience-item,
+  .education-item,
+  .skill-category {
+    page-break-inside: avoid;
+  }
+
+  /* Forcer les sauts avant certaines sections si nécessaire */
+  .experience-section {
+    page-break-before: auto;
+  }
+
+  /* Éviter les titres orphelins */
+  .section-title {
+    page-break-after: avoid;
+  }
+
+  h3, h4 {
+    page-break-after: avoid;
+  }
+
+  /* ============================================
+     OPTIMISATIONS FINALES
+     ============================================ */
+
+  /* Supprimer les transitions et animations */
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /* Désactiver les effets hover */
+  *:hover {
+    transform: none !important;
+  }
+
+  /* Liens en noir (sauf email) */
+  a {
+    color: #1a202c !important;
+    text-decoration: none !important;
+  }
+
+  a[href^="mailto:"] {
+    color: #FF2D20 !important;
+    text-decoration: underline !important;
+  }
+
+  /* Optimisation des marges */
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Forcer l'impression des couleurs importantes */
+  .name,
+  .title,
+  .company,
+  .period,
+  .skill-item::before {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+/**
+ * NOTES D'UTILISATION
+ * 
+ * 1. Impression : Ctrl+P ou bouton PDF du site
+ * 2. Configuration navigateur :
+ *    - Format : A4
+ *    - Marges : Par défaut
+ *    - Arrière-plans : Activé (pour les couleurs)
+ * 3. Résultat attendu : 1-2 pages maximum
+ * 
+ * ÉLÉMENTS MASQUÉS EN VERSION PDF :
+ * - Bouton PDF et sélecteur de langue (UI web)
+ * - Footer avec réseaux sociaux (info déjà dans contact)
+ * - Icônes décoratives (clarté visuelle)
+ * - Effets visuels (ombres, animations)
+ * 
+ * SIMPLIFICATIONS APPLIQUÉES :
+ * - Header : fond blanc avec bordure rouge sobre
+ * - Photo : réduite à 80px
+ * - Contact : grille 2 colonnes compacte
+ * - Compétences : 2 colonnes sans icônes
+ * - Timeline : ligne grise sobre
+ * - Soft skills : liste textuelle simple
+ * 
+ * COULEURS CONSERVÉES :
+ * - Rouge #FF2D20 : points clés, accents
+ * - Noir #1a202c : texte principal
+ * - Gris #52525B : texte secondaire
+ * 
+ * Compatible ATS ✓
+ * Lisible N&B ✓
+ * Professionnel ✓
+ */
