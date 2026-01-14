@@ -1,7 +1,7 @@
 export const useLanguageSwitcher = () => {
   const availableLocales = [
-    { code: 'fr', name: 'Français', flag: '🇫🇷' },
-    { code: 'en', name: 'English', flag: '🇬🇧' }
+    { code: 'fr', name: 'Français' },
+    { code: 'en', name: 'English' }
   ]
 
   return {
