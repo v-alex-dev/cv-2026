@@ -6,13 +6,14 @@
   "header": {
     "name": "Alexandre Vens",
     "title": "Développeur Backend Laravel (Junior)",
-    "subtitle": "API, Architecture logicielle & polyvalence Fullstack"
+    "subtitle": "API, Architecture logicielle & polyvalence Fullstack",
+    "downloadPDF": "Télécharger en PDF"
   },
   "contact": {
     "title": "Contact",
     "address": "Huissignies 7950, Belgique",
     "phone": "Disponible sur demande par mail",
-    "email": "dev.alexandre.cv@gmail.com",
+    "email": "dev.alexandre.cv{'@'}gmail.com",
     "license": "Permis B, véhicule personnel",
     "languages": {
       "title": "Langues",
@@ -192,7 +193,7 @@
   "footer": {
     "references": "Références disponibles sur demande",
     "connect": "Me contacter & suivre mon travail",
-    "email": "dev.alexandre.cv@gmail.com",
+    "email": "dev.alexandre.cv{'@'}gmail.com",
     "linkedin": "LinkedIn",
     "github": "GitHub"
   }
