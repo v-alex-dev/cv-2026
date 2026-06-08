@@ -1,39 +1,37 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { UsersIcon, ArrowPathIcon, BoltIcon, UserGroupIcon, RocketLaunchIcon } from '@heroicons/vue/24/outline'
 
 const { t } = useI18n()
 
-const softSkills = [
-  { key: 'teamwork', icon: UsersIcon },
-  { key: 'adaptability', icon: ArrowPathIcon },
-  { key: 'resilience', icon: BoltIcon },
-  { key: 'collaborative', icon: UserGroupIcon },
-  { key: 'learning', icon: RocketLaunchIcon }
-]
+const softSkillKeys = [
+  'teamwork',
+  'adaptability',
+  'resilience',
+  'collaborative',
+  'learning'
+] as const
 </script>
 
 <template>
   <section class="cv-section profile-section">
     <h3 class="section-title">{{ t('profile.title') }}</h3>
-    
+
     <div class="profile-content">
       <p class="description">{{ t('profile.description') }}</p>
       <p class="highlight">{{ t('profile.highlight') }}</p>
     </div>
-    
+
     <div class="soft-skills">
       <h4>{{ t('profile.softSkills.title') }}</h4>
-      <div class="skills-grid">
-        <div
-          v-for="skill in softSkills"
-          :key="skill.key"
-          class="skill-badge"
+      <ul class="skills-list">
+        <li
+          v-for="key in softSkillKeys"
+          :key="key"
+          class="skill-item"
         >
-          <component :is="skill.icon" class="skill-icon" />
-          <span class="skill-name">{{ t(`profile.softSkills.${skill.key}`) }}</span>
-        </div>
-      </div>
+          {{ t(`profile.softSkills.${key}`) }}
+        </li>
+      </ul>
     </div>
   </section>
 </template>
@@ -44,107 +42,83 @@ const softSkills = [
 }
 
 .profile-content {
-  margin-bottom: 2rem;
-}
-
-.description {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--color-text-primary);
   margin-bottom: 1.5rem;
 }
 
-.highlight {
-  background: var(--color-primary-alpha);
-  padding: 1.5rem;
-  border-left: 4px solid var(--color-primary);
-  border-radius: 0.5rem;
+.description {
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.75;
+  color: var(--color-text-primary);
+  margin: 0 0 1rem 0;
+}
+
+.highlight {
+  border-left: 3px solid var(--color-primary);
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  line-height: 1.65;
   color: var(--color-text-secondary);
   font-style: italic;
+  margin: 0;
+  background: transparent;
 }
 
 .soft-skills h4 {
-  color: var(--color-text-primary);
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 0.75rem 0;
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
-}
-
-.skill-badge {
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem 1rem;
-  background: var(--color-bg-secondary);
-  border: 2px solid var(--color-border);
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
 }
 
-.skill-badge:hover {
-  border-color: var(--color-primary);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-primary);
-}
-
-.skill-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  color: var(--color-primary);
-  flex-shrink: 0;
-}
-
-.skill-name {
+.skills-list .skill-item {
+  font-size: 0.9rem;
   color: var(--color-text-secondary);
-  font-weight: 500;
-  font-size: 0.95rem;
+  position: relative;
+  padding-left: 0.9rem;
 }
 
-@media (max-width: 1024px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.skills-list .skill-item::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: 700;
 }
 
+/* ── Responsive ── */
 @media (max-width: 768px) {
   .description {
-    font-size: 1rem;
-  }
-  
-  .highlight {
-    padding: 1.25rem;
     font-size: 0.95rem;
   }
-  
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-  }
-  
-  .skill-badge {
+
+  .highlight {
     padding: 0.625rem 0.875rem;
+    font-size: 0.9rem;
+  }
+
+  .skills-list {
+    gap: 0.4rem 1.25rem;
   }
 }
 
 @media (max-width: 480px) {
   .description {
-    font-size: 0.95rem;
-  }
-  
-  .highlight {
-    padding: 1rem;
     font-size: 0.9rem;
   }
-  
-  .soft-skills h4 {
-    font-size: 1.1rem;
+
+  .highlight {
+    font-size: 0.875rem;
   }
 }
 </style>
