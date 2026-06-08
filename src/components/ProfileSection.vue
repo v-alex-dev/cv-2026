@@ -8,7 +8,7 @@ const softSkillKeys = [
   'adaptability',
   'resilience',
   'collaborative',
-  'learning'
+  'learning',
 ] as const
 </script>
 
@@ -24,11 +24,7 @@ const softSkillKeys = [
     <div class="soft-skills">
       <h4>{{ t('profile.softSkills.title') }}</h4>
       <ul class="skills-list">
-        <li
-          v-for="key in softSkillKeys"
-          :key="key"
-          class="skill-item"
-        >
+        <li v-for="key in softSkillKeys" :key="key" class="skill-item">
           {{ t(`profile.softSkills.${key}`) }}
         </li>
       </ul>
@@ -69,7 +65,7 @@ const softSkillKeys = [
   color: var(--color-text-tertiary);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin: 0 0 0.75rem 0;
+  margin: 1.25rem 0 0.75rem 0;
 }
 
 .skills-list {
@@ -89,14 +85,14 @@ const softSkillKeys = [
 }
 
 .skills-list .skill-item::before {
-  content: '·';
+  content: '/';
   position: absolute;
   left: 0;
   color: var(--color-primary);
   font-weight: 700;
+  font-size: 0.8rem;
 }
 
-/* ── Responsive ── */
 @media (max-width: 768px) {
   .description {
     font-size: 0.95rem;
