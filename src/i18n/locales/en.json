@@ -6,7 +6,7 @@
   "header": {
     "name": "Alexandre Vens",
     "title": "Laravel Backend Developer",
-    "subtitle": "API · Architecture · Fullstack",
+    "subtitle": "API · SQL · Fullstack",
     "downloadPDF": "Download PDF"
   },
   "contact": {
@@ -23,8 +23,8 @@
   },
   "profile": {
     "title": "About",
-    "description": "I build clean Laravel backends and APIs that hold up in production. Comfortable across the full stack, from SQL schema to Vue.js interface, switching frameworks without losing my bearings.",
-    "highlight": "What sets me apart: I read existing code before writing new code. I prefer understanding a system before modifying it.",
+    "description": "Three internships, three different stacks: PHP Laravel, C# .NET, Python Django. Each time: read the existing code before writing mine, understand the choices before questioning them. I build backends that do what they are supposed to do, without over-engineering.",
+    "highlight": "What sets me apart: I ask questions before opening a file. I would rather lose ten minutes in a meeting than two days fixing a misunderstanding.",
     "softSkills": {
       "title": "In practice",
       "teamwork": "I ask questions rather than make assumptions",
@@ -43,9 +43,9 @@
         "period": "2025",
         "location": "Belgium",
         "tasks": [
-          "Angular feature development in a multi-tenant application",
-          "Dynamic theming system on the frontend side",
-          "Contributed to C# backend services"
+          "Développement Angular dans une app multi-tenant",
+          "Système de thématisation dynamique par client",
+          "Contribution ponctuelle aux services C# backend"
         ],
         "achievements": null
       },
@@ -55,9 +55,9 @@
         "period": "2024",
         "location": "Belgium",
         "tasks": [
-          "Shopify analytics dashboard: Angular, AWS Amplify, GraphQL",
-          "Large-scale data processing with BigQuery",
-          "Static sites with Astro, JSON data structuring"
+          "Dashboard analytique Shopify : Angular, AWS Amplify, GraphQL",
+          "Traitement de données volumineuses avec BigQuery",
+          "Sites statiques Astro, structuration de fichiers JSON"
         ],
         "achievements": null
       },
@@ -67,8 +67,8 @@
         "period": "2022",
         "location": "Belgium",
         "tasks": [
-          "Built an internal management app from scratch, solo",
-          "Django REST Framework API, React frontend"
+          "Application de gestion interne, de zéro, en autonomie complète",
+          "API Django REST Framework côté backend, React côté frontend"
         ],
         "achievements": null
       }
@@ -88,19 +88,19 @@
     },
     "frontend": {
       "title": "Frontend",
-      "items": ["Vue.js · TypeScript · JavaScript", "Angular · React · Astro", "HTML / CSS"]
+      "items": ["Vue.js / TypeScript", "Angular / React / Astro", "HTML / CSS"]
     },
     "data": {
       "title": "API & Data",
-      "items": ["REST · GraphQL", "Shopify API · BigQuery", "JSON manipulation"]
+      "items": ["REST / GraphQL", "Shopify API / BigQuery", "JSON manipulation"]
     },
     "tools": {
       "title": "Tools",
-      "items": ["Git / GitHub", "Docker · Postman", "AWS Amplify · Umbraco", "Scrum / Agile"]
+      "items": ["Git / GitHub", "Docker / Postman", "AWS Amplify / Umbraco", "Scrum / Agile"]
     },
     "learning": {
       "title": "Currently learning",
-      "items": ["Formation IA (NLP,LLM, LRM)", "Laravel (going deeper)"]
+      "items": ["AI: NLP, LLM, agents", "Laravel (going deeper)"]
     }
   },
   "education": {
