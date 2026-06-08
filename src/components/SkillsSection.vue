@@ -1,39 +1,40 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { CogIcon, PaintBrushIcon, ChartBarIcon, WrenchScrewdriverIcon, BookOpenIcon } from '@heroicons/vue/24/outline'
 
 const { t, tm } = useI18n()
 
 const skillCategories = [
-  { key: 'backend', color: '#FF2D20', icon: CogIcon },
-  { key: 'frontend', color: '#F97316', icon: PaintBrushIcon },
-  { key: 'data', color: '#0EA5E9', icon: ChartBarIcon },
-  { key: 'tools', color: '#71717A', icon: WrenchScrewdriverIcon },
-  { key: 'learning', color: '#8B5CF6', icon: BookOpenIcon }
-]
+  { key: 'backend', accent: '#FF2D20' },
+  { key: 'frontend', accent: '#F97316' },
+  { key: 'data', accent: '#0EA5E9' },
+  { key: 'tools', accent: '#71717A' },
+  { key: 'learning', accent: '#8B5CF6' }
+] as const
 </script>
 
 <template>
   <section class="cv-section skills-section">
     <h3 class="section-title">{{ t('skills.title') }}</h3>
-    
+
     <div class="skills-container">
       <div
         v-for="category in skillCategories"
         :key="category.key"
         class="skill-category"
       >
-        <div class="category-header">
-          <component :is="category.icon" class="category-icon" :style="{ color: category.color }" />
-          <h4 class="category-title">{{ t(`skills.${category.key}.title`) }}</h4>
-        </div>
-        
+        <h4
+          class="category-title"
+          :style="{ color: category.accent }"
+        >
+          {{ t(`skills.${category.key}.title`) }}
+        </h4>
+
         <ul class="skill-items">
           <li
             v-for="(skill, index) in tm(`skills.${category.key}.items`)"
             :key="index"
             class="skill-item"
-            :style="{ '--skill-color': category.color }"
+            :style="{ '--skill-color': category.accent }"
           >
             {{ skill }}
           </li>
@@ -50,45 +51,30 @@ const skillCategories = [
 
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
 }
 
 .skill-category {
   background: var(--color-bg-primary);
-  border-radius: 0.75rem;
-  padding: 1.5rem;
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  padding: 1rem;
   border: 1px solid var(--color-border);
+  transition: border-color 0.2s ease;
 }
 
 .skill-category:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
   border-color: var(--color-primary);
 }
 
-.category-header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid var(--color-border);
-}
-
-.category-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  flex-shrink: 0;
-}
-
 .category-title {
-  margin: 0;
-  color: var(--color-text-primary);
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .skill-items {
@@ -97,74 +83,46 @@ const skillCategories = [
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.3rem;
 }
 
 .skill-item {
   position: relative;
-  padding: 0.5rem 0.75rem 0.5rem 1.5rem;
+  padding: 0.2rem 0 0.2rem 0.9rem;
   color: var(--color-text-secondary);
-  line-height: 1.5;
-  transition: all 0.2s ease;
+  font-size: 0.875rem;
+  line-height: 1.4;
 }
 
 .skill-item::before {
-  content: '▸';
+  content: '·';
   position: absolute;
   left: 0;
   color: var(--skill-color);
-  font-weight: bold;
+  font-size: 0.7rem;
+  top: 0.3rem;
 }
 
-.skill-item:hover {
-  color: var(--color-text-primary);
-  transform: translateX(4px);
-}
-
-@media (max-width: 1024px) {
+/* ── Responsive ── */
+@media (max-width: 1100px) {
   .skills-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .skills-container {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .skill-category {
-    padding: 1.25rem;
-  }
-  
-  .category-title {
-    font-size: 1rem;
+    padding: 0.875rem;
   }
 }
 
 @media (max-width: 480px) {
-  .skill-category {
-    padding: 1rem;
-  }
-  
-  .category-header {
-    gap: 0.5rem;
-    padding-bottom: 0.75rem;
-  }
-  
-  .category-icon {
-    width: 1.25rem;
-    height: 1.25rem;
-  }
-  
-  .category-title {
-    font-size: 0.95rem;
-  }
-  
-  .skill-item {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.5rem 0.4rem 1.25rem;
+  .skills-container {
+    grid-template-columns: 1fr;
   }
 }
 </style>
