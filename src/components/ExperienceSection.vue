@@ -1,10 +1,15 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Experience } from '../types/cv'
 
-const { t, tm } = useI18n()
+const { t, tm, locale } = useI18n()
 
-const jobs = tm('experience.jobs') as unknown as Experience[]
+const jobs = computed(() => {
+  // Dépendance explicite sur locale.value pour forcer la réévaluation au changement de langue
+  void locale.value
+  return tm('experience.jobs') as unknown as Experience[]
+})
 </script>
 
 <template>
@@ -12,11 +17,7 @@ const jobs = tm('experience.jobs') as unknown as Experience[]
     <h3 class="section-title">{{ t('experience.title') }}</h3>
 
     <div class="timeline">
-      <article
-        v-for="(job, index) in jobs"
-        :key="index"
-        class="experience-item"
-      >
+      <article v-for="(job, index) in jobs" :key="index" class="experience-item">
         <div class="experience-header">
           <div class="company-info">
             <h4 class="position">{{ job.position }}</h4>
@@ -140,14 +141,9 @@ const jobs = tm('experience.jobs') as unknown as Experience[]
   background: rgba(16, 185, 129, 0.05);
 }
 
-/* ── Responsive ── */
 @media (max-width: 768px) {
   .timeline {
     padding-left: 1rem;
-  }
-
-  .timeline::before {
-    width: 2px;
   }
 
   .experience-item {
@@ -174,10 +170,6 @@ const jobs = tm('experience.jobs') as unknown as Experience[]
     align-self: flex-start;
     padding: 0.3rem 0.7rem;
     font-size: 0.825rem;
-  }
-
-  .tasks-list {
-    font-size: 0.9rem;
   }
 }
 

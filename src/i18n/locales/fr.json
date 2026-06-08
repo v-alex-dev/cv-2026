@@ -23,7 +23,7 @@
   },
   "profile": {
     "title": "Profil",
-    "description": "Trois stages, trois stacks différentes. PHP Laravel, C# .NET, Python Django. A chaque fois : lire le code existant avant d'écrire le mien, comprendre les choix avant de les remettre en question. Je construis des backends qui font ce qu'on leur demande, sans surarchitecturer.",
+    "description": "Trois stages, trois stacks différentes : PHP Laravel, C# .NET, Python Django. A chaque fois la même approche : lire le code existant avant d'écrire le mien, comprendre les choix avant de les remettre en question. Je construis des backends qui font ce qu'on leur demande, sans surarchitecturer.",
     "highlight": "Ce qui me distingue : je pose des questions avant d'ouvrir un fichier. Je préfère perdre dix minutes en réunion que deux jours à corriger une mauvaise compréhension.",
     "softSkills": {
       "title": "En pratique",

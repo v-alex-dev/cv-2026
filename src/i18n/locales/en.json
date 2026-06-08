@@ -23,7 +23,7 @@
   },
   "profile": {
     "title": "About",
-    "description": "Three internships, three different stacks: PHP Laravel, C# .NET, Python Django. Each time: read the existing code before writing mine, understand the choices before questioning them. I build backends that do what they are supposed to do, without over-engineering.",
+    "description": "Three internships, three different stacks: PHP Laravel, C# .NET, Python Django. Each time: read the existing code before writing mine, understand the choices before questioning them. I build backends that do what they are asked to do, without over-engineering.",
     "highlight": "What sets me apart: I ask questions before opening a file. I would rather lose ten minutes in a meeting than two days fixing a misunderstanding.",
     "softSkills": {
       "title": "In practice",
@@ -43,9 +43,9 @@
         "period": "2025",
         "location": "Belgium",
         "tasks": [
-          "Développement Angular dans une app multi-tenant",
-          "Système de thématisation dynamique par client",
-          "Contribution ponctuelle aux services C# backend"
+          "Angular development in a multi-tenant application",
+          "Dynamic per-client theming system",
+          "Occasional contributions to C# backend services"
         ],
         "achievements": null
       },
@@ -55,9 +55,9 @@
         "period": "2024",
         "location": "Belgium",
         "tasks": [
-          "Dashboard analytique Shopify : Angular, AWS Amplify, GraphQL",
-          "Traitement de données volumineuses avec BigQuery",
-          "Sites statiques Astro, structuration de fichiers JSON"
+          "Shopify analytics dashboard: Angular, AWS Amplify, GraphQL",
+          "High-volume data processing with BigQuery",
+          "Static sites with Astro, JSON file structuring"
         ],
         "achievements": null
       },
@@ -67,8 +67,8 @@
         "period": "2022",
         "location": "Belgium",
         "tasks": [
-          "Application de gestion interne, de zéro, en autonomie complète",
-          "API Django REST Framework côté backend, React côté frontend"
+          "Internal management app built from scratch, working independently",
+          "Django REST Framework backend, React frontend"
         ],
         "achievements": null
       }
@@ -130,7 +130,7 @@
       {
         "school": "IFAPME",
         "location": "Belgium",
-        "degree": "Mobile development",
+        "degree": "Mobile Development",
         "period": "2020 - 2021",
         "description": ""
       }

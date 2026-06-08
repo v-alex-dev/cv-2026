@@ -1,10 +1,14 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { Education } from '../types/cv'
 
-const { t, tm } = useI18n()
+const { t, tm, locale } = useI18n()
 
-const educationItems = tm('education.items') as unknown as Education[]
+const educationItems = computed(() => {
+  void locale.value
+  return tm('education.items') as unknown as Education[]
+})
 </script>
 
 <template>
@@ -12,11 +16,7 @@ const educationItems = tm('education.items') as unknown as Education[]
     <h3 class="section-title">{{ t('education.title') }}</h3>
 
     <div class="education-grid">
-      <article
-        v-for="(item, index) in educationItems"
-        :key="index"
-        class="education-item"
-      >
+      <article v-for="(item, index) in educationItems" :key="index" class="education-item">
         <h4 class="degree">{{ item.degree }}</h4>
         <p class="school">{{ item.school }}</p>
         <p class="location-period">{{ item.location }} · {{ item.period }}</p>
@@ -76,7 +76,6 @@ const educationItems = tm('education.items') as unknown as Education[]
   margin: 0;
 }
 
-/* ── Responsive ── */
 @media (max-width: 1024px) {
   .education-grid {
     grid-template-columns: repeat(2, 1fr);
