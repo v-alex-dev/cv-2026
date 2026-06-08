@@ -6,7 +6,7 @@
   "header": {
     "name": "Alexandre Vens",
     "title": "Développeur Backend Laravel",
-    "subtitle": "API · Architecture · Fullstack",
+    "subtitle": "API · SQL · Fullstack",
     "downloadPDF": "Télécharger en PDF"
   },
   "contact": {
@@ -23,14 +23,14 @@
   },
   "profile": {
     "title": "Profil",
-    "description": "Je construis des backends Laravel propres et des API qui tiennent à l'usage. Je suis à l'aise sur toute la chaîne web, du schéma SQL à l'interface Vue.js, et je passe d'un framework à l'autre sans me perdre.",
-    "highlight": "Ce qui me distingue : je lis le code des autres avant d'en écrire. Je préfère comprendre le système avant de le modifier.",
+    "description": "Trois stages, trois stacks différentes. PHP Laravel, C# .NET, Python Django. A chaque fois : lire le code existant avant d'écrire le mien, comprendre les choix avant de les remettre en question. Je construis des backends qui font ce qu'on leur demande, sans surarchitecturer.",
+    "highlight": "Ce qui me distingue : je pose des questions avant d'ouvrir un fichier. Je préfère perdre dix minutes en réunion que deux jours à corriger une mauvaise compréhension.",
     "softSkills": {
       "title": "En pratique",
       "teamwork": "Je pose des questions plutôt que des suppositions",
-      "adaptability": "Nouveau projet = nouvelle lecture du code existant",
+      "adaptability": "Nouveau projet = lire le code existant en premier",
       "resilience": "Je documente ce que j'aurais voulu trouver",
-      "collaborative": "À l'aise en équipe comme en autonomie",
+      "collaborative": "A l'aise en équipe comme en solo",
       "learning": "J'apprends par la pratique, pas par les tutoriels"
     }
   },
@@ -43,9 +43,9 @@
         "period": "2025",
         "location": "Belgique",
         "tasks": [
-          "Développement de fonctionnalités Angular dans une app multi-tenant",
-          "Système de thématisation dynamique côté frontend",
-          "Contribution aux services C# côté backend"
+          "Développement Angular dans une app multi-tenant",
+          "Système de thématisation dynamique par client",
+          "Contribution ponctuelle aux services C# backend"
         ],
         "achievements": null
       },
@@ -57,7 +57,7 @@
         "tasks": [
           "Dashboard analytique Shopify : Angular, AWS Amplify, GraphQL",
           "Traitement de données volumineuses avec BigQuery",
-          "Sites statiques Astro, structuration JSON"
+          "Sites statiques Astro, structuration de fichiers JSON"
         ],
         "achievements": null
       },
@@ -67,8 +67,8 @@
         "period": "2022",
         "location": "Belgique",
         "tasks": [
-          "Application de gestion interne de A à Z en autonomie",
-          "API Django REST Framework, frontend React"
+          "Application de gestion interne, de zéro, en autonomie complète",
+          "API Django REST Framework côté backend, React côté frontend"
         ],
         "achievements": null
       }
@@ -88,35 +88,19 @@
     },
     "frontend": {
       "title": "Frontend",
-      "items": [
-        "Vue.js · TypeScript · JavaScript",
-        "Angular · React · Astro",
-        "HTML / CSS"
-      ]
+      "items": ["Vue.js / TypeScript", "Angular / React / Astro", "HTML / CSS"]
     },
     "data": {
       "title": "API & Données",
-      "items": [
-        "REST · GraphQL",
-        "Shopify API · BigQuery",
-        "Manipulation JSON"
-      ]
+      "items": ["REST / GraphQL", "Shopify API / BigQuery", "Manipulation JSON"]
     },
     "tools": {
       "title": "Outils",
-      "items": [
-        "Git / GitHub",
-        "Docker · Postman",
-        "AWS Amplify · Umbraco",
-        "Scrum / Agile"
-      ]
+      "items": ["Git / GitHub", "Docker / Postman", "AWS Amplify / Umbraco", "Scrum / Agile"]
     },
     "learning": {
       "title": "En cours",
-      "items": [
-        "Formation IA (NLP,LLM, LRM)",
-        "Laravel (approfondissement)"
-      ]
+      "items": ["IA : NLP, LLM, agents", "Laravel (approfondissement)"]
     }
   },
   "education": {
