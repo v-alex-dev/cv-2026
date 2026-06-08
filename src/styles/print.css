@@ -1,14 +1,13 @@
 /**
- * print.css - Impression PDF A4, 2 pages maximum
- * Ciblage strict : reset visuel, pas d'icônes décoratives,
- * typographie lisible, grille compacte.
+ * print.css — A4, 2 pages maximum
+ * Typo lisible, grille compacte, pas d'icones décoratives.
  */
 
 @media print {
 
   @page {
     size: A4 portrait;
-    margin: 12mm 14mm;
+    margin: 10mm 13mm;
   }
 
   * {
@@ -19,26 +18,22 @@
     box-shadow: none !important;
   }
 
-  /* ── Reset général ── */
+  /* ── Reset ── */
   body {
     font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 9.5pt;
-    line-height: 1.45;
+    font-size: 8.5pt;
+    line-height: 1.4;
     color: #1a202c;
     background: white !important;
     margin: 0;
     padding: 0;
   }
 
-  /* ── Éléments masqués ── */
+  /* ── Masqués à l'impression ── */
   .pdf-btn,
   .language-switcher,
   .cv-footer,
-  button {
-    display: none !important;
-  }
-
-  /* Masquer toutes les icônes SVG décoratives */
+  button,
   .skill-icon,
   .category-icon,
   .education-icon,
@@ -47,7 +42,7 @@
     display: none !important;
   }
 
-  /* ── Page container ── */
+  /* ── Conteneurs ── */
   .cv-page {
     background: white !important;
   }
@@ -66,22 +61,22 @@
   .cv-header {
     background: white !important;
     color: #1a202c !important;
-    padding: 0 0 10pt 0 !important;
-    border-bottom: 2.5pt solid #FF2D20 !important;
+    padding: 0 0 8pt 0 !important;
+    border-bottom: 2pt solid #FF2D20 !important;
     box-shadow: none !important;
     display: flex !important;
     align-items: center !important;
-    gap: 14pt !important;
+    gap: 12pt !important;
     text-align: left !important;
-    margin-bottom: 10pt;
+    margin-bottom: 8pt;
     page-break-after: avoid;
   }
 
   .profile-photo {
     position: static !important;
     transform: none !important;
-    width: 70pt !important;
-    height: 70pt !important;
+    width: 62pt !important;
+    height: 62pt !important;
     border-radius: 50% !important;
     border: 1.5pt solid #e5e7eb !important;
     flex-shrink: 0;
@@ -96,32 +91,34 @@
   }
 
   .name {
-    font-size: 20pt !important;
+    font-size: 18pt !important;
     font-weight: 700 !important;
     color: #1a202c !important;
     margin: 0 0 2pt 0 !important;
     letter-spacing: -0.02em;
+    text-shadow: none !important;
   }
 
   .title {
-    font-size: 12pt !important;
+    font-size: 11pt !important;
     font-weight: 600 !important;
     color: #FF2D20 !important;
     margin: 0 0 2pt 0 !important;
   }
 
   .subtitle {
-    font-size: 9pt !important;
+    font-size: 8pt !important;
     color: #52525b !important;
     margin: 0 !important;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+    opacity: 1 !important;
   }
 
   /* ── SECTIONS ── */
   .cv-section {
     background: white !important;
-    padding: 8pt 0 !important;
+    padding: 6pt 0 !important;
     margin: 0 !important;
     border: none !important;
     border-radius: 0 !important;
@@ -129,13 +126,13 @@
   }
 
   .section-title {
-    font-size: 8pt !important;
+    font-size: 7.5pt !important;
     font-weight: 700 !important;
     color: #52525b !important;
     letter-spacing: 0.12em !important;
     text-transform: uppercase !important;
-    margin: 0 0 6pt 0 !important;
-    padding-bottom: 3pt !important;
+    margin: 0 0 5pt 0 !important;
+    padding-bottom: 2.5pt !important;
     border-bottom: 1pt solid #e5e7eb !important;
     display: block !important;
   }
@@ -143,15 +140,15 @@
   /* ── CONTACT ── */
   .contact-section {
     background: white !important;
-    padding: 8pt 0 !important;
+    padding: 6pt 0 !important;
     border: none !important;
   }
 
   .contact-grid {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 3pt 12pt !important;
-    margin-bottom: 5pt !important;
+    gap: 2pt 12pt !important;
+    margin-bottom: 4pt !important;
   }
 
   .contact-item {
@@ -159,32 +156,31 @@
     border: none !important;
     padding: 0 !important;
     display: flex;
-    align-items: flex-start;
+    align-items: baseline;
     gap: 4pt;
-    font-size: 8.5pt !important;
+    font-size: 8pt !important;
   }
 
   .contact-item:hover {
     transform: none !important;
   }
 
-  /* Masquer les icônes heroicons dans contact */
   .contact-item svg,
   .contact-item .icon {
     display: none !important;
   }
 
   .contact-item strong {
-    font-size: 8pt !important;
+    font-size: 7.5pt !important;
     font-weight: 600 !important;
     color: #52525b !important;
-    min-width: 48pt;
+    min-width: 44pt;
     display: inline-block;
   }
 
   .contact-item p,
   .contact-item a {
-    font-size: 8.5pt !important;
+    font-size: 8pt !important;
     color: #1a202c !important;
     text-decoration: none !important;
     margin: 0 !important;
@@ -195,11 +191,11 @@
   }
 
   .languages {
-    margin-top: 4pt !important;
+    margin-top: 3pt !important;
   }
 
   .languages h4 {
-    font-size: 8pt !important;
+    font-size: 7.5pt !important;
     font-weight: 600 !important;
     color: #52525b !important;
     margin: 0 0 2pt 0 !important;
@@ -216,8 +212,10 @@
   }
 
   .languages li {
-    font-size: 8.5pt !important;
+    font-size: 8pt !important;
     color: #1a202c !important;
+    background: transparent !important;
+    padding: 0 !important;
   }
 
   /* ── PROFIL ── */
@@ -226,65 +224,54 @@
   }
 
   .description {
-    font-size: 9pt !important;
+    font-size: 8.5pt !important;
     line-height: 1.5 !important;
     color: #1a202c !important;
-    margin: 0 0 5pt 0 !important;
+    margin: 0 0 4pt 0 !important;
   }
 
   .highlight {
     background: transparent !important;
     border: none !important;
     border-left: 2pt solid #FF2D20 !important;
-    padding: 3pt 0 3pt 8pt !important;
+    padding: 2pt 0 2pt 7pt !important;
     border-radius: 0 !important;
-    font-size: 8.5pt !important;
-    line-height: 1.45 !important;
+    font-size: 8pt !important;
+    line-height: 1.4 !important;
     color: #52525b !important;
     font-style: italic !important;
-    margin-bottom: 5pt !important;
+    margin-bottom: 4pt !important;
   }
 
-  /* Soft skills : liste horizontale textuelle, sans badges ni icônes */
   .soft-skills h4 {
-    font-size: 8pt !important;
+    font-size: 7.5pt !important;
     font-weight: 600 !important;
     color: #52525b !important;
     text-transform: uppercase !important;
     letter-spacing: 0.08em !important;
-    margin: 0 0 3pt 0 !important;
+    margin: 4pt 0 2pt 0 !important;
   }
 
-  .skills-grid {
+  .skills-list {
     display: flex !important;
     flex-wrap: wrap !important;
-    gap: 4pt 12pt !important;
-  }
-
-  .skill-badge {
-    background: transparent !important;
-    border: none !important;
+    gap: 2pt 14pt !important;
+    list-style: none !important;
     padding: 0 !important;
-    display: flex !important;
-    align-items: center;
-    gap: 4pt;
+    margin: 0 !important;
   }
 
-  .skill-badge .skill-icon {
-    display: none !important;
-  }
-
-  .skill-name {
-    font-size: 8.5pt !important;
+  .skills-list .skill-item {
+    font-size: 8pt !important;
     color: #52525b !important;
+    padding-left: 0.75rem !important;
   }
 
-  .skill-name::before {
-    content: '·';
-    color: #FF2D20;
+  .skills-list .skill-item::before {
+    color: #FF2D20 !important;
   }
 
-  /* ── COMPÉTENCES ── */
+  /* ── COMPETENCES ── */
   .skills-section {
     background: white !important;
     page-break-inside: avoid;
@@ -293,7 +280,7 @@
   .skills-container {
     display: grid !important;
     grid-template-columns: repeat(5, 1fr) !important;
-    gap: 0 10pt !important;
+    gap: 0 8pt !important;
   }
 
   .skill-category {
@@ -304,22 +291,14 @@
     page-break-inside: avoid;
   }
 
-  .category-header {
-    margin-bottom: 3pt !important;
-    padding-bottom: 0 !important;
-    border-bottom: none !important;
-  }
-
-  .category-icon {
-    display: none !important;
-  }
-
   .category-title {
-    font-size: 8pt !important;
+    font-size: 7.5pt !important;
     font-weight: 700 !important;
-    color: #FF2D20 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.06em !important;
+    margin: 0 0 2pt 0 !important;
+    padding-bottom: 2pt !important;
+    border-bottom: 1pt solid #e5e7eb !important;
   }
 
   .skill-items {
@@ -331,16 +310,16 @@
 
   .skill-item {
     padding: 1pt 0 1pt 8pt !important;
-    font-size: 8.5pt !important;
+    font-size: 8pt !important;
     color: #1a202c !important;
-    line-height: 1.4 !important;
+    line-height: 1.35 !important;
   }
 
   .skill-item::before {
     color: #FF2D20 !important;
   }
 
-  /* ── EXPÉRIENCES ── */
+  /* ── EXPERIENCES ── */
   .experience-section {
     background: white !important;
   }
@@ -349,20 +328,17 @@
     padding-left: 0 !important;
   }
 
-  /* Supprimer la ligne verticale */
   .timeline::before {
     display: none !important;
   }
 
   .experience-item {
-    margin-bottom: 8pt !important;
-    padding-left: 0 !important;
+    margin-bottom: 6pt !important;
+    padding-left: 7pt !important;
+    border-left: 1.5pt solid #e5e7eb;
     page-break-inside: avoid;
-    border-left: 2pt solid #e5e7eb;
-    padding-left: 8pt !important;
   }
 
-  /* Supprimer le rond de timeline */
   .experience-item::before {
     display: none !important;
   }
@@ -371,18 +347,26 @@
     display: flex !important;
     justify-content: space-between !important;
     align-items: baseline !important;
-    margin-bottom: 3pt !important;
+    margin-bottom: 2pt !important;
+    gap: 6pt !important;
+  }
+
+  .company-info {
+    display: flex;
+    gap: 5pt;
+    align-items: baseline;
+    flex-wrap: wrap;
   }
 
   .position {
-    font-size: 9.5pt !important;
+    font-size: 9pt !important;
     font-weight: 600 !important;
     color: #1a202c !important;
     margin: 0 !important;
   }
 
   .company {
-    font-size: 8.5pt !important;
+    font-size: 8pt !important;
     font-weight: 500 !important;
     color: #FF2D20 !important;
     margin: 0 !important;
@@ -392,26 +376,21 @@
     background: transparent !important;
     padding: 0 !important;
     border-radius: 0 !important;
-    font-size: 8pt !important;
+    font-size: 7.5pt !important;
     font-weight: 400 !important;
     color: #71717a !important;
     white-space: nowrap;
-  }
-
-  .company-info {
-    display: flex;
-    gap: 6pt;
-    align-items: baseline;
+    flex-shrink: 0;
   }
 
   .tasks-list {
-    margin: 3pt 0 0 0 !important;
-    padding-left: 10pt !important;
+    margin: 2pt 0 0 0 !important;
+    padding-left: 9pt !important;
   }
 
   .tasks-list li {
-    font-size: 8.5pt !important;
-    line-height: 1.45 !important;
+    font-size: 8pt !important;
+    line-height: 1.4 !important;
     color: #1a202c !important;
     margin-bottom: 1pt !important;
   }
@@ -420,7 +399,6 @@
     color: #FF2D20 !important;
   }
 
-  /* Masquer les achievements si null */
   .achievement {
     display: none !important;
   }
@@ -433,7 +411,7 @@
   .education-grid {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 4pt 16pt !important;
+    gap: 3pt 14pt !important;
   }
 
   .education-item {
@@ -453,19 +431,15 @@
     display: none !important;
   }
 
-  .education-content {
-    flex: 1;
-  }
-
   .degree {
-    font-size: 9pt !important;
+    font-size: 8.5pt !important;
     font-weight: 600 !important;
     color: #1a202c !important;
     margin: 0 0 1pt 0 !important;
   }
 
   .school {
-    font-size: 8.5pt !important;
+    font-size: 8pt !important;
     font-weight: 500 !important;
     color: #FF2D20 !important;
     margin: 0 0 1pt 0 !important;
@@ -477,13 +451,8 @@
     margin: 0 !important;
   }
 
-  /* Masquer la description formation si vide */
-  .description:empty {
-    display: none !important;
-  }
-
   .education-content .description {
-    font-size: 8pt !important;
+    font-size: 7.5pt !important;
     color: #52525b !important;
     margin: 1pt 0 0 0 !important;
     line-height: 1.35 !important;
@@ -498,7 +467,8 @@
   }
 
   .section-title,
-  h3, h4 {
+  h3,
+  h4 {
     page-break-after: avoid;
   }
 
