@@ -1,153 +1,106 @@
 {
   "meta": {
-    "title": "Alexandre Vens - Junior Laravel Backend Developer",
-    "description": "Resume of Alexandre Vens, Junior Backend Developer specialized in Laravel with strong foundations in API, software architecture and technical problem solving"
+    "title": "Alexandre Vens - Laravel Backend Developer",
+    "description": "Resume of Alexandre Vens, Laravel backend developer based in Belgium"
   },
   "header": {
     "name": "Alexandre Vens",
-    "title": "Junior Laravel Backend Developer",
-    "subtitle": "API, Software Architecture & Fullstack Versatility",
-    "downloadPDF": "Download as PDF"
+    "title": "Laravel Backend Developer",
+    "subtitle": "API · Architecture · Fullstack",
+    "downloadPDF": "Download PDF"
   },
   "contact": {
     "title": "Contact",
-    "address": "Huissignies 7950, Belgium",
-    "phone": "Available on request by email",
+    "address": "Huissignies, Belgium",
+    "phone": "On request",
     "email": "dev.alexandre.cv{'@'}gmail.com",
-    "license": "Driver's license B, personal vehicle",
+    "license": "Driver's license B, own vehicle",
     "languages": {
       "title": "Languages",
       "french": "French (native)",
-      "english": "English (A2 level)"
+      "english": "English (A2)"
     }
   },
   "profile": {
     "title": "About",
-    "description": "Junior Backend Developer specialized in Laravel, with strong interest in API design, code structuring and comprehensive understanding of web systems. Comfortable with both backend and frontend, I have solid technical foundations and ability to quickly level up according to project needs.",
-    "highlight": "Junior profile with rigorous approach, focused on best practices, code readability and continuous improvement. Experienced in working on concrete projects and learning new technologies autonomously.",
+    "description": "I build clean Laravel backends and APIs that hold up in production. Comfortable across the full stack, from SQL schema to Vue.js interface, switching frameworks without losing my bearings.",
+    "highlight": "What sets me apart: I read existing code before writing new code. I prefer understanding a system before modifying it.",
     "softSkills": {
-      "title": "Core Qualities",
-      "teamwork": "Collaborative Spirit",
-      "adaptability": "Adaptability",
-      "resilience": "Technical Curiosity",
-      "collaborative": "Teamwork",
-      "learning": "Fast Learning Ability"
+      "title": "In practice",
+      "teamwork": "I ask questions rather than make assumptions",
+      "adaptability": "New project means reading the existing codebase first",
+      "resilience": "I document what I wish I had found",
+      "collaborative": "Comfortable in a team or working solo",
+      "learning": "I learn by doing, not by watching tutorials"
     }
   },
   "experience": {
-    "title": "Professional Experience",
+    "title": "Experience",
     "jobs": [
       {
         "company": "Multios",
-        "position": "Frontend Developer Intern",
+        "position": "Frontend Developer (internship)",
         "period": "2025",
         "location": "Belgium",
         "tasks": [
-          "Participation in frontend feature development with Angular",
-          "Implementation of a dynamic multi-tenant theming solution",
-          "Contribution to backend services development with C#",
-          "Collaboration in agile team on application projects"
+          "Angular feature development in a multi-tenant application",
+          "Dynamic theming system on the frontend side",
+          "Contributed to C# backend services"
         ],
-        "achievements": "Participation in implementing a dynamic theme management system"
+        "achievements": null
       },
       {
         "company": "AVSIT",
-        "position": "Web Developer Intern",
+        "position": "Web Developer (internship)",
         "period": "2024",
         "location": "Belgium",
         "tasks": [
-          "Development of a Shopify analytics dashboard with Angular and AWS Amplify",
-          "Shopify API integration via GraphQL",
-          "Data analysis and processing with BigQuery",
-          "Static website development with Astro",
-          "JSON data manipulation and structuring"
+          "Shopify analytics dashboard: Angular, AWS Amplify, GraphQL",
+          "Large-scale data processing with BigQuery",
+          "Static sites with Astro, JSON data structuring"
         ],
-        "achievements": "Development of a functional analytics dashboard integrating Shopify data"
-      },
-      {
-        "company": "BeCode",
-        "position": "Junior Web Developer (Training)",
-        "period": "2023-2024",
-        "location": "Charleroi, Belgium",
-        "tasks": [
-          "Intensive 8-month Fullstack web development training",
-          "Collaborative projects using agile methodology",
-          "Backend and frontend web application development",
-          "Learning and practical application of multiple web technologies"
-        ],
-        "achievements": "Strengthened autonomy and ability to solve technical problems"
+        "achievements": null
       },
       {
         "company": "Barestho",
-        "position": "Fullstack Developer Intern",
+        "position": "Fullstack Developer (internship)",
         "period": "2022",
         "location": "Belgium",
         "tasks": [
-          "Autonomous development of an internal management application",
-          "API creation with Django REST Framework",
-          "Frontend development with React",
-          "Implementation of overall application architecture"
+          "Built an internal management app from scratch, solo",
+          "Django REST Framework API, React frontend"
         ],
-        "achievements": "Delivery of a functional fullstack application meeting internal needs"
+        "achievements": null
       }
     ]
   },
   "skills": {
-    "title": "Technical Skills",
+    "title": "Skills",
     "backend": {
       "title": "Backend",
       "items": [
-        "PHP (Laravel)",
-        "SQL (MySQL, Microsoft SQL Server)",
-        ".NET (.NET Core, C#)",
-        "Python (Django)",
-        "NestJS",
-        "Node.js"
+        "PHP / Laravel",
+        "C# / .NET Core",
+        "Python / Django",
+        "NestJS / Node.js",
+        "SQL (MySQL, MSSQL)"
       ]
     },
     "frontend": {
-      "title": "Frontend & Integration",
-      "items": [
-        "Vue.js (currently learning)",
-        "TypeScript",
-        "JavaScript (ES6+)",
-        "Angular",
-        "React",
-        "Next.js",
-        "Astro",
-        "i18n (internationalization)"
-      ]
+      "title": "Frontend",
+      "items": ["Vue.js · TypeScript · JavaScript", "Angular · React · Astro", "HTML / CSS"]
     },
     "data": {
-      "title": "Data & API",
-      "items": [
-        "REST API",
-        "GraphQL",
-        "Shopify API",
-        "Data processing with BigQuery",
-        "JSON data manipulation",
-        "Third-party service integration"
-      ]
+      "title": "API & Data",
+      "items": ["REST · GraphQL", "Shopify API · BigQuery", "JSON manipulation"]
     },
     "tools": {
-      "title": "Tools & Methodologies",
-      "items": [
-        "Git / GitHub",
-        "Agile Methods (Scrum)",
-        "Project Management",
-        "Docker",
-        "Postman / Insomnia",
-        "AWS Amplify",
-        "CMS (Umbraco)"
-      ]
+      "title": "Tools",
+      "items": ["Git / GitHub", "Docker · Postman", "AWS Amplify · Umbraco", "Scrum / Agile"]
     },
     "learning": {
-      "title": "Currently Learning",
-      "items": [
-        "Symfony",
-        "Laravel deepening",
-        "Application architecture and best practices"
-      ]
+      "title": "Currently learning",
+      "items": ["Formation IA (NLP,LLM, LRM)", "Laravel (going deeper)"]
     }
   },
   "education": {
@@ -155,44 +108,37 @@
     "items": [
       {
         "school": "Cepegra",
-        "location": "Charleroi, Belgium",
+        "location": "Charleroi",
         "degree": "Frontend Web Developer",
         "period": "2025",
-        "description": "Specialization in frontend development with modern technologies"
+        "description": ""
       },
       {
         "school": "BeCode",
-        "location": "Charleroi, Belgium",
+        "location": "Charleroi",
         "degree": "Fullstack Web Developer",
-        "period": "2023-2024",
-        "description": "Intensive practice-oriented fullstack web development training"
-      },
-      {
-        "school": "Forem",
-        "location": "Belgium",
-        "degree": "English Improvement",
-        "period": "2022",
-        "description": "English level improvement from A1 to A2"
+        "period": "2023 - 2024",
+        "description": "8 months of intensive practice, team projects"
       },
       {
         "school": "Technocité",
-        "location": "Charleroi, Belgium",
-        "degree": ".NET Development (C#)",
-        "period": "2021-2022",
-        "description": "Training focused on object-oriented programming and multi-device development"
+        "location": "Charleroi",
+        "degree": ".NET / C# Development",
+        "period": "2021 - 2022",
+        "description": ""
       },
       {
         "school": "IFAPME",
         "location": "Belgium",
-        "degree": "Mobile Application Development",
-        "period": "2020-2021",
-        "description": "Mobile application development fundamentals"
+        "degree": "Mobile development",
+        "period": "2020 - 2021",
+        "description": ""
       }
     ]
   },
   "footer": {
-    "references": "References available upon request",
-    "connect": "Connect with me & follow my work",
+    "references": "References available on request",
+    "connect": "Get in touch",
     "email": "dev.alexandre.cv{'@'}gmail.com",
     "linkedin": "LinkedIn",
     "github": "GitHub"
